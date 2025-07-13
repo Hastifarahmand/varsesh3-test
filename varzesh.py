@@ -13,8 +13,7 @@ for link in links:
         ns.append(" ")
     else:
         ms.append(link["href"]+"\n")
-print(len(ns))
-print(len(ms))
+
 for m in ms:
     web=requests.get(m)
     soup=BeautifulSoup(web.content)
@@ -25,5 +24,4 @@ for m in ms:
      f2=open("images/" +n ,"wb")
      web=requests.get(img)
      f2.write(web.content) 
-     f2.close()   # break
-# links=dvs[0]
+     f2.close()  
